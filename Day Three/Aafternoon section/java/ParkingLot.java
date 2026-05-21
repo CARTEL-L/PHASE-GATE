@@ -24,19 +24,19 @@ public class ParkingLot{
 
         int[] parkingStatus = slot;
         slotNumber = slot[0];
-        String car = pending;
+        String car = "pending";
         String slotStatus = empty;
     for(int count = 0; count < slot.length; count++){
 
     if(slot[count] == 0){
-    slotStatus = empty;
+    slotStatus = "empty";
 
 }else if(slot[count] == 1){
-    slotStatus+count = occupied;
+    slotStatus+count = "occupied";
 
 }if(slot[count] == 0 && slotNumber == slot[count]){
     car = parked;
-}    
+}
 
 }
 
@@ -44,13 +44,16 @@ public class ParkingLot{
         parkingStatus = slot[counter];
 }
 
-    return slot[counter];
+    return parkingStatus;
 }
 
 
 
         public static void main(String[] args){
-    int[] park = {1,0,1,1,0,1,1,0,0,0,0,0,0,0,0,1,1,0,1,0};
+    int[] park = {
+                {1, 0}
+                {0, 0}
+};
     int parkNumber = park[8];
     System.out.println(Arrays.toString(parking(park)));
 
@@ -61,3 +64,7 @@ public class ParkingLot{
 
 
 }
+
+
+
+
